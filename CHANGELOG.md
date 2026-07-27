@@ -17,6 +17,13 @@ For every release:
 5. Create a versioned Apps Script deployment only after acceptance testing.
 6. Commit and tag the matching Git release when approved.
 
+## [0.2.1] — 2026-07-27
+
+### Changed
+
+- Removed unit-filter controls for non-admin users; each search now covers their complete server-authorized data scope by default.
+- Added a full-screen animated search-progress overlay that clearly identifies the APBS query in progress.
+
 ## [0.2.0] — 2026-07-27
 
 ### Added

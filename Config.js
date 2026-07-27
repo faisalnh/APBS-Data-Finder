@@ -1,6 +1,6 @@
 const APP_CONFIG = Object.freeze({
   appName: 'APBS Data Finder',
-  appVersion: '0.2.0',
+  appVersion: '0.2.1',
   academicYear: '2026–2027',
   cache: Object.freeze({ version: 'v2', ttlSeconds: 120, maxChunkBytes: 85000 }),
   search: Object.freeze({ defaultLimit: 30, maximumLimit: 50 }),
