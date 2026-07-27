@@ -1,8 +1,8 @@
 const APP_CONFIG = Object.freeze({
   appName: 'APBS Data Finder',
-  appVersion: '0.1.0',
+  appVersion: '0.2.0',
   academicYear: '2026–2027',
-  cache: Object.freeze({ version: 'v1', ttlSeconds: 120, maxChunkBytes: 85000 }),
+  cache: Object.freeze({ version: 'v2', ttlSeconds: 120, maxChunkBytes: 85000 }),
   search: Object.freeze({ defaultLimit: 30, maximumLimit: 50 }),
   columns: Object.freeze({
     className: 1,
@@ -23,10 +23,10 @@ const APP_CONFIG = Object.freeze({
     { id: 'mad-lab', label: 'MAD LAB', sheetName: '5. MAD LAB', rowSpec: '104,116-121,123-124,130-146,172-175' },
     {
       id: 'shield', label: 'SHIELD', sheetName: '6. SHIELD',
-      rowSpec: '126-131,133-138,140-141,143-145,148-150,152-158,160-187,189-191,198-211,213-239,241-269,271-275,282-283,295-369,371-400,402-421,423-458,460-470,472-577,580-599,601-623,625-629,631-637',
+      rowSpec: '126-131,133-138,140-141,143-145,148-150,152-158,160-187,189-191,197-211,213-239,241-269,271-275,282-283,295-369,370-400,402-421,423-458,460-470,472-577,580-599,601-623,625-629,631-637',
       sections: [
-        { label: 'TK', rowSpec: '198-211' }, { label: 'SD', rowSpec: '213-239' }, { label: 'SMP', rowSpec: '241-269' },
-        { label: 'TK', rowSpec: '371-400' }, { label: 'SD', rowSpec: '402-421' }, { label: 'SMP', rowSpec: '423-458' }
+        { label: 'TK', rowSpec: '197-211' }, { label: 'SD', rowSpec: '213-239' }, { label: 'SMP', rowSpec: '241-269' },
+        { label: 'TK', rowSpec: '370-400' }, { label: 'SD', rowSpec: '402-421' }, { label: 'SMP', rowSpec: '423-458' }
       ]
     },
     { id: 'rise', label: 'RISE', sheetName: '7. RISE', rowSpec: '94-140,142-152,154-170' },

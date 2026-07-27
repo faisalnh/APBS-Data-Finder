@@ -17,6 +17,21 @@ For every release:
 5. Create a versioned Apps Script deployment only after acceptance testing.
 6. Commit and tag the matching Git release when approved.
 
+## [0.2.0] — 2026-07-27
+
+### Added
+
+- Server-enforced, email-based role-based access control for the supplied staff roster.
+- Automatic access to APBS data for each staff member's assigned unit only; no manual unit selection can expand server-side access.
+- Unit-aware interface that identifies the permitted APBS unit and removes irrelevant unit filters for single-unit users.
+- Administrator access for `ian.ahmad@millennia21.id`, `faisal@millennia21.id`, and `mahrukh@millennia21.id` across the full APBS database.
+- Shared school-level SHIELD access: Kindergarten staff can access TK sections, Elementary staff can access SD sections, and Junior High staff can access SMP sections.
+
+### Changed
+
+- Replaced the v0.1.0 temporary all-units tester permission with the staff access registry.
+- Corrected SHIELD TK source ranges to include `197–211` (Project Baru – Unit TK) and `370–400` (Kebutuhan Kelas TK).
+
 ## [0.1.0] — 2026-07-27
 
 Initial working version of the APBS search web app.

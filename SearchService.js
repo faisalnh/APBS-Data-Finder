@@ -13,7 +13,7 @@ function searchApbs(request) {
   const normalizedQuery = normalizeSearchText_(query);
   const normalizedNumber = normalizeApbsNumber_(query);
   const terms = tokenizeSearchQuery_(query);
-  const results = allowedUnitIds.flatMap(unitId => getUnitRecords_(getUnitConfig_(unitId)).map(record => {
+  const results = allowedUnitIds.flatMap(unitId => getUnitRecords_(getUnitConfig_(unitId)).filter(record => canAccessApbsRecord_(access, record)).map(record => {
     const score = scoreApbsRecord_(record, normalizedQuery, normalizedNumber, terms);
     return score ? Object.assign({}, publicApbsRecord_(record), { _score: score }) : null;
   }).filter(Boolean));
