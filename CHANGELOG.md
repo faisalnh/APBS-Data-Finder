@@ -1,0 +1,44 @@
+# APBS Data Finder — Version History
+
+This document records application-facing releases. Use semantic versioning:
+
+- **MAJOR** (`X.0.0`): incompatible changes to user workflows, data contracts, or access behavior.
+- **MINOR** (`0.X.0`): backward-compatible features.
+- **PATCH** (`0.1.X`): backward-compatible fixes, data-configuration corrections, and visual refinements.
+
+## Release checklist
+
+For every release:
+
+1. Update `APP_CONFIG.appVersion` in `Config.js`.
+2. Update the footer release label in `Code.js`.
+3. Add a dated entry below describing user-visible changes.
+4. Push the latest source to Apps Script HEAD.
+5. Create a versioned Apps Script deployment only after acceptance testing.
+6. Commit and tag the matching Git release when approved.
+
+## [0.1.0] — 2026-07-27
+
+Initial working version of the APBS search web app.
+
+### Added
+
+- Read-only APBS lookup across the ten configured unit tabs.
+- Server-side search by APBS name and normalized APBS number.
+- Unit filters and result ranking.
+- Total budget (`CO`) and remaining budget (`CR`) display.
+- Duplicate-name context using structured sheet metadata and heading inference.
+- Row-whitelist configuration for 1,395 source rows, with non-APBS headings automatically excluded.
+- Per-unit caching and a configuration validation utility.
+- Authenticated-user scaffold for the planned role-based access rollout.
+- Responsive MWS-aligned search interface with loading, empty, error, and no-results states.
+
+### Data configuration
+
+- Corrected the Junior High source range from `372-273` to `372-373`.
+- The current reference dataset contains three configured non-searchable rows without valid APBS numbers; they are safely excluded by validation.
+
+### Deployment
+
+- Initial versioned Apps Script deployment was created.
+- The development `/dev` URL is the current test target and runs latest Apps Script HEAD.
